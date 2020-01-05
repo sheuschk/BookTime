@@ -17,6 +17,9 @@ class Product(models.Model):
     date_updated = models.DateTimeField(auto_now=True)
     objects = ActiveManager()
 
+    def __str__(self):
+        return self.name
+
 
 class ProductImage(models.Model):
     product = models.ForeignKey(

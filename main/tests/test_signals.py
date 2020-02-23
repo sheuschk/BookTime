@@ -13,7 +13,7 @@ class TestSignal(TestCase):
         product.save()
 
         with open(
-                "main/fixtures/the-cathedral-the-bazaar.jpg", "rb"
+                "main/fixtures/cathedral.jpg", "rb"
         ) as f:
             image = models.ProductImage(
                 product=product,

@@ -5,8 +5,6 @@ from django.core.management import call_command
 from django.test import TestCase, override_settings
 from main import models
 
-# TODO fix the import, the out var is empty.
-
 
 class TestImport(TestCase):
     @override_settings(MEDIA_ROOT=tempfile.gettempdir())
@@ -26,6 +24,4 @@ class TestImport(TestCase):
         self.assertEqual(models.Product.objects.count(), 3)
         self.assertEqual(models.ProductTag.objects.count(), 6)
         self.assertEqual(models.ProductImage.objects.count(), 3)
-        # : it does not test for the csv file to exist, images to be present in the basedir, and so on.
-        # the output is nothing, just a empty string -->
 
